@@ -1,0 +1,127 @@
+
+
+
+    <div class="rows">
+        <div class="col-3 head">
+            <h1>XYZ Online meds shop <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-emoji-laughing" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M12.331 9.5a1 1 0 0 1 0 1A4.998 4.998 0 0 1 8 13a4.998 4.998 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5zM7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5z"/>
+              </svg>...</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repellendus voluptates quis. Deserunt temporibus, molestias odit hic fuga eveniet ex cupiditate sapiente nulla consequatur harum, unde, quia atque reprehenderit laboriosam.</p>
+            <button routerLink="/login" class="btn btn-success">Shop now</button>
+        </div>
+           <div class="image col-2">
+            <img class="alt" src="https://i.guim.co.uk/img/media/f6557d1cd6a4538d38d5d730a978bf03ebec02e6/0_159_3500_2100/master/3500.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=cd20207b5f65542710ec7051d1e091ca" alt="">
+           </div>
+    </div>
+
+ 
+    <div class="items">
+        <div class="row">
+            <div class="col-md-3 " *ngFor="let pro of productList">
+                <img class="img" (click)="image()" src="{{pro.product_image}}" alt="">
+                <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{pro.product_desc}}</h5>
+                <h6>{{pro.product_price}}</h6>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ------------------ Features ----------------------------------- -->
+    
+ <div class="feature">
+    <div class="items">
+        <div class="row">
+            <h3 class="title">Features</h3>
+            <div class="col-md-3" *ngFor="let feat of featureList">
+                <img class="img" (click)="addToCart(feat)" src="{{feat.product_image}}" alt="">
+                <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{feat.product_desc}}</h5>
+                <h6>R{{feat.product_price}}</h6>
+            </div>
+        </div>
+      </div>
+ </div>
+
+
+ <!-- ---------------------------- Sale --------------------------------------------- -->
+
+ <div class="sale">
+     <div class="row">
+         <div class="title">Sale</div>
+         <div class="col-md-3" *ngFor="let sale of saleList">
+            <img src="{{sale.product_image}}" (click)="addToCartSale(sale)" alt="" class="img">
+             <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{sale.product_desc}}</h5>
+             <h6>was R{{sale.product_normal_price}}</h6>
+             <h6>now R{{sale.product_sale_price}} <sup style="background-color: red; color: #fff;">30%</sup></h6>
+            </div>
+     </div>
+ </div> <br > <br >
+
+ 
+
+ <div class="brands">
+    <div class="container">
+        <div class="items">
+            <div class="row">
+                <div class="title">Our Sponsors and Clients</div>
+               <div class="col-md-2">
+                <img style="margin-bottom: 10px;" class="img" src="https://logos-world.net/wp-content/uploads/2020/03/Coca-Cola-Logo-1987-2009.png" alt="">
+               </div>
+               <div class="col-md-2">
+                <img class="img" src="https://www.takealot.com/static/images/logo_transparent.png" alt="">
+               </div>
+               <div class="col-md-2">
+                <img class="img" src="https://cdn.freebiesupply.com/images/large/2x/amazon-logo-transparent.png" alt="">
+               </div>
+               <div class="col-md-2">
+                <img class="img" src="http://assets.stickpng.com/images/58480fd7cef1014c0b5e4943.png" alt="">
+               </div>
+               <div class="col-md-2">
+                <img class="img" src="https://image.emojipng.com/976/9852976.jpg" alt="">
+               </div>
+               <div class="col-md-2">
+                <img class="img" src="http://assets.stickpng.com/images/58482363cef1014c0b5e49c1.png" alt="">
+               </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+<!-- --------------------------------------------- Footer --------------------------------------------- -->
+
+ <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer col-md-3 first">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="https://www.earfy.net/wp-content/uploads/2017/06/2000px-Download_on_the_App_Store_Badge.svg_.png" alt="">
+                    <img src="https://www.aps.edu/students-parents/images/downloadOnTheGooglePlayStoreBadge.png/image_preview" alt="">
+                </div>
+            </div>
+            <div class="footer col-md-3 first another">
+                <img src="https://logodix.com/logo/1603728.jpg" alt="" style="width: 120; height: 120px; border-radius: 15px;">
+                <p style="margin-bottom: 10px;">Our purpose is break the bridge that covid was trying to build to make our lives quite difficult. Now you can practice social destance and quarantine, yet be able to ge your product back at you...</p>
+            </div>
+            <div class="footer col-md-3 second">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliation</li>
+                </ul>
+            </div>
+            <div class="footer col-md-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ </div>

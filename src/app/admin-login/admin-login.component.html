@@ -1,0 +1,25 @@
+
+
+<main class="form-signin">
+    <form>
+      <img class="mb-4" src="https://logodix.com/logo/1603728.jpg" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Admin Portal</h1>
+  
+      <div class="form-floating">
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="admin.email" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="admin.password" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+  
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-outline-primary" type="submit" (click)="adminLogin()">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2021–2031 <br /> <small>@developed by Clearance Morumudi</small></p>
+    </form>
+  </main>

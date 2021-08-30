@@ -1,0 +1,36 @@
+
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>No:</th>
+            <th>Sr.No:</th>
+            <th>Name:</th>
+            <th>Email:</th>
+            <th>Mobile Number</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Password</th>
+            <th>Confirm Password</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reg of registerList; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{reg._id}}</td>
+            <td>{{reg.name}}</td>
+            <td><{{reg.email}}></td>
+            <td>{{reg.mobile_number}</td>
+            <td>{{reg.gender}}</td>
+            <td>{{reg.address}}</td>
+            <td>{{reg.password}}</td>
+            <td>{{reg.confirm_password}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteUser()">Delete</button> <br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button routerLink="/admin-dashboard" class="btn btn-success">Back</button> &nbsp;&nbsp;

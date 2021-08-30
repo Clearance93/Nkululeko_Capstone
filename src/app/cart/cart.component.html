@@ -1,0 +1,98 @@
+
+<div class="container">
+    <div class="card">
+        <div class="card-title"><h2>My cart</h2></div>
+    </div>
+        <div class="center">
+            <ng-container *ngIf="product.length !=0">
+                <div class="card-table">
+                    <div class="card-product">
+                        <table class="table table-responsive table-stiped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Sr.No:</th>
+                                    <th>Product Id</th>
+                                    <th>Image:</th>
+                                    <th>Name:</th>
+                                    <th>Description:</th>
+                                    <th>Price:</th>
+                                    <th>Quantity:</th>
+                                    <th>total:</th>
+                                    <th>Action:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let pro of product; let i = index">
+                                    <td style="width: 12%;">{{i + 1}}</td>
+                                    <td style="width: 12%;">{{pro._id}}</td>
+                                    <td style="width: 12%;"><img src="{{pro.product_image}}" alt=""></td>
+                                    <td style="width: 12%;">{{pro.product_name}}</td>
+                                    <td style="width: 12%;">{{pro.product_desc}}</td>
+                                    <td style="width: 12%;">{{pro.product_price}}</td>
+                                    <td style="width: 12%;">{{pro.product_quantity}}</td>
+                                    <td style="width: 12%;">{{pro.product_total}}</td>
+                                    <td style="width: 12%;"><button (click)="removeItem(product)" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                      </svg></button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6"></td>
+                                    <td><button class="btn btn-danger" (click)="emptyCart()">Empty cart</button></td>
+                                    <td><button routerLink="/product" class="btn btn-primary">Shop more</button></td>
+                                    <td><button routerLink="/checkout" class="btn btn-warning">Checkout</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- <table class="table table-responsive table-hover table-stiped">
+                           
+                            <tbody>
+                                <tr *ngFor="let product of product; let i = index">
+                                    <th>Product No:</th>
+                                    <td>{{i +1}}</td>
+                                </tr>
+                                <tr *ngFor="let product of product">
+                                    <th>Product Name:</th>
+                                    <td>{{product.product_name}}}}</td>
+                                </tr>
+                                <tr *ngFor="let product of product">
+                                    <th>Product Image:</th>
+                                     <td><img src="{{product.product_image}}" alt=""></td>
+                                </tr>   
+                                <tr *ngFor="let product of product">
+                                    <th>Product Description:</th>
+                                    <td>{{product.product_desc}}</td>
+                                </tr>    
+                                <tr *ngFor="let product of product">
+                                    <th>Product Price</th>
+                                    <td>{{product.product_price}}</td>
+                                </tr>    
+                                <tr *ngFor="let product of product">
+                                    <th>Product Quantity</th>
+                                    <td>{{product.product_quantity}}</td>
+                                </tr>    
+                                <tr>
+                                    <th>Total</th>
+                                    <td>{{product.product_total}}</td>
+                                </tr>    
+                                <tr>    
+                                    <th>Action</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table> -->
+                    </div>
+                </div>
+            </ng-container>
+
+       <div class="empty">
+            <ng-container *ngIf="product.length ==0">
+                <img src="https://www.webanimator.com/en/images/18p005v1-box-3.gif" alt="">
+                <h5>Your card is empty</h5>
+                <h6>Add some items to your cart</h6>
+                <button class="btn btn-warning" routerLink="/product">Let's do some shopping</button>
+        </ng-container>
+       </div>
+    </div>
+</div>

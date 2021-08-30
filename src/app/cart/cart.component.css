@@ -1,0 +1,47 @@
+
+.card-title{
+    text-align: center;
+    margin-top: 10px;
+    background-color: lightblue;
+    color: orangered;
+}
+
+
+.empty{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.card-table{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1 solid black;
+    border-radius: 5px;
+}
+
+tr{
+    margin: 10px;
+}
+
+img{
+    width: 125px;
+    height: 105px;
+    border-radius: 10px;
+}
+
+thead{
+    background-color: orange;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}

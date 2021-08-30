@@ -1,0 +1,23 @@
+
+<div class="container">
+    <div class="card-header">
+        Products Upload
+    </div>
+    <div class="card-body">
+        <form class="form">
+            <label for="name">Product Name</label>
+            <input type="text" name="product_name" [(ngModel)]="sale.product_name" id="product_name" class="form-control">
+            <label for="price">Product Price</label>
+            <input type="text" name="product_price" [(ngModel)]="sale.product_normal_price" id="product_price" class="form-control">
+            <label for="price">Product Sale Price</label>
+            <input type="text" name="product_price" [(ngModel)]="sale.product_sale_price" id="product_price" class="form-control">
+            <label for="description">Product Description</label>
+            <input type="text" name="product_desc" [(ngModel)]="sale.product_desc" id="product_desc" class="form-control">
+            <label for="quantity">Product Quantity</label>
+            <input type="text" name="product_qauntity" [(ngModel)]="sale.product_quantity" id="product_qaintity" class="form-control">
+            <label for="image">Url Image</label>
+            <input type="text" name="product_image" [(ngModel)]="sale.product_image" id="product_image" class="form-control">
+        </form> <br />
+        <input  type="submit" value="Submit" class="btn btn-warning" (click)="submit()">
+    </div>
+</div>

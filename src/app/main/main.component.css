@@ -1,0 +1,13 @@
+
+.cart{
+    position: fixed;
+    margin-left: 85%;
+}
+
+.text-end{
+    margin-right: 160px;
+}
+
+form, input{
+    margin-right: 350px;
+}

@@ -1,0 +1,50 @@
+
+
+<div class="row align-items-md-stretch">
+    <div class="col-md-5">
+        <div class="h-100 p-3 text-whiterounded-3">
+            <img src="{{feature.product_image}}" width="70%" height="300" />
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="h-100 p-2 rounded-3">
+            <div class="card">
+                <div class="card-header">Product Details</div>
+                <div class="card-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Product Id</td>
+                                <td>{{_id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Product Name</td>
+                                <td>{{feature.product_name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Product Price</td>
+                                <td>{{feature.product_price}}</td>
+                            </tr>
+                            <tr>
+                                <td>Product Description</td>
+                                <td>{{feature.product_desc}}</td>
+                            </tr>
+                            <tr>
+                                <td>Product Quantity</td>
+                                <td>{{feature.product_quantity}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a routerLink='/feature-add' class="btn btn-sm btn-outline-secondary">Add</a> &nbsp;
+                            <button type="button" class="btn btn-sm btn-outline-danger" (click)="productDelete()">Delete</button> &nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

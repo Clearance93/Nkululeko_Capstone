@@ -1,0 +1,60 @@
+
+
+
+
+.content{
+    text-align: center;
+}
+
+.content h2{
+    color: orangered;
+    font-weight: 700;
+}
+
+.content p{
+    color: darkblue;
+    background-color: lightgray;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 50px;
+    background: radial-gradient(#fff, #ffd6d6, #d6d6ff);
+}
+
+.contactInfo{
+    padding-right: 170px;
+    color: darkblue;
+    margin-right: 60px;
+    border-radius: 60px;
+
+}
+
+.box{
+    align-items: center;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+h3{
+    color: orangered;
+}
+
+.contactForm{
+    width: 420px;
+}
+
+.inputBox{
+    padding: 20px;
+    width: 150px;
+}
+
+input textarea{
+    width: 320px;
+}
+
+.form-control{
+    width: 350px;
+}

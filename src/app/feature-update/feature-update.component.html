@@ -1,0 +1,65 @@
+
+
+<div class="row align-items-md-stretch">
+    <div class="col-md-5">
+        <div class="h-100 p-3 text-whiterounded-3">
+            <img src="{{feat.product_image}}" width="70%" height="300" />
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="h-100 p-2 rounded-3">
+            <div class="card">
+                <div class="card-header">Product Details</div>
+                <div class="card-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Product Id</td>
+                                <td>{{_id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Product Name</td>
+                                <td>
+                                    <form class="form">
+                                        <input type="text" name="product_name" [(ngModel)]="feat.product_name" id="product_price" class="form-control">
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Product Price</td>
+                                <td>
+                                    <form class="form">
+                                        <input type="text" name="product_price" [(ngModel)]="feat.product_price" id="product_price" class="form-control">
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Product Description</td>
+                                <td>
+                                    <form class="form">
+                                        <input type="text" name="product_desc" [(ngModel)]="feat.product_desc" id="product_desc" class="form-control">
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Product Quantity</td>
+                                <td>
+                                    <form class="form">
+                                        <input type="text" name="product_quantity" [(ngModel)]="feat.product_quantity" id="product_quantity" class="form-control">
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button class="btn btn-outline-primary btn-sm" (click)="updateFeature()">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
